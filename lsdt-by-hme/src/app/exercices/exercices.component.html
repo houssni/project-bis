@@ -1,3 +1,21 @@
-<p>
-  exercices works!
-</p>
+
+    <p>Exercices:</p>
+    <ul>
+      <li *ngFor="let exo of lastExercices">
+          <p-card title="exo.nom" subtitle="exo.categorie" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+              <p-header>
+                  <img src="Card" src="assets/showcase/images/usercard.png">
+              </p-header>
+            {{exo.id}}
+            {{exo.categorie}}
+            {{exo.nom}}
+            {{exo.description}}
+            {{exo.video}}
+            <p-footer>
+                <button pButton type="button" label="Save" icon="fa-check"></button>
+                <button pButton type="button" label="Cancel" icon="fa-close" class="ui-button-secondary"></button>
+            </p-footer>
+        </p-card>
+      </li>
+    </ul>
+
