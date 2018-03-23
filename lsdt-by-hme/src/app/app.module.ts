@@ -12,6 +12,8 @@ import { CardModule } from 'primeng/card';
 import { GalleriaModule } from 'primeng/galleria';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {CarouselModule} from 'primeng/carousel';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import {MessageModule} from 'primeng/message';
     BrowserModule,
     BrowserAnimationsModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

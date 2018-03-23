@@ -1,21 +1,21 @@
-
-    <p>Exercices:</p>
-    <ul>
-      <li *ngFor="let exo of lastExercices">
-          <p-card title="exo.nom" subtitle="exo.categorie" [style]="{width: '360px'}" styleClass="ui-card-shadow">
-              <p-header>
-                  <img src="Card" src="assets/showcase/images/usercard.png">
-              </p-header>
-            {{exo.id}}
-            {{exo.categorie}}
-            {{exo.nom}}
-            {{exo.description}}
-            {{exo.video}}
-            <p-footer>
-                <button pButton type="button" label="Save" icon="fa-check"></button>
-                <button pButton type="button" label="Cancel" icon="fa-close" class="ui-button-secondary"></button>
-            </p-footer>
-        </p-card>
-      </li>
-    </ul>
+  <div>
+        <p-carousel [value]="lastExercices">
+            <ng-template let-exo pTemplate="item">
+                <p-card title="{{exo.nom}}"  subtitle="{{exo.categorie}}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+                    <p-header>
+                        <img src="Card" src="assets/showcase/images/usercard.png">
+                    </p-header>
+                  {{exo.id}}
+                 <p>Ajouter une photo avec le type video parait plus logique</p>
+                 <p>En résumé</p>
+                  <p>{{  (exo.description.length>50)? (exo.description | slice:0:50)+'..':(exo.description)}}</p>
+                  {{exo.video}}
+                  <p-footer>
+                      <button pButton (click)="selectExercice2()" type="button" label="Voir" icon="fa-eye" ></button>
+                      <button pButton type="button" label="Noter" icon="fa-star" class="ui-button-secondary"></button>
+                  </p-footer>
+              </p-card>
+            </ng-template>         
+        </p-carousel>
+   </div>
 
