@@ -10,6 +10,8 @@ import { ProgrammesComponent } from './programmes/programmes.component';
 import {ButtonModule} from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { GalleriaModule } from 'primeng/galleria';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { GalleriaModule } from 'primeng/galleria';
     CardModule,
     GalleriaModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MessagesModule,
+    MessageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
